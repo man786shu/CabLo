@@ -10,15 +10,15 @@
 		730ED2021BB16D950004391D /* CBWebServiceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 730ED2011BB16D950004391D /* CBWebServiceManager.m */; settings = {ASSET_TAGS = (); }; };
 		7345947B1BA94FDD00CF00E7 /* CBProfessionalInfoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7345947A1BA94FDD00CF00E7 /* CBProfessionalInfoVC.m */; };
 		7345947E1BA973F800CF00E7 /* CBUploadIDVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7345947D1BA973F800CF00E7 /* CBUploadIDVC.m */; };
+		734DEE861BB284B80004D653 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 734DEE831BB284B80004D653 /* FBSDKCoreKit.framework */; settings = {ASSET_TAGS = (); }; };
+		734DEE871BB284B80004D653 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 734DEE841BB284B80004D653 /* FBSDKLoginKit.framework */; settings = {ASSET_TAGS = (); }; };
+		734DEE881BB284B80004D653 /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 734DEE851BB284B80004D653 /* FBSDKShareKit.framework */; settings = {ASSET_TAGS = (); }; };
 		736487491BA02791003AF6F8 /* CBTableFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 736487481BA02791003AF6F8 /* CBTableFooterView.m */; };
 		7364874C1BA03AEF003AF6F8 /* NSString+validation.m in Sources */ = {isa = PBXBuildFile; fileRef = 7364874B1BA03AEF003AF6F8 /* NSString+validation.m */; };
 		736487521BA0419B003AF6F8 /* CBVerifyOTPVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 736487511BA0419B003AF6F8 /* CBVerifyOTPVC.m */; };
 		736487561BA045E8003AF6F8 /* CBVerifyPhoneNumberCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 736487551BA045E8003AF6F8 /* CBVerifyPhoneNumberCell.m */; };
 		7364875A1BA05E62003AF6F8 /* CBAccountManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 736487591BA05E62003AF6F8 /* CBAccountManager.m */; };
 		737732FC1BA8028500566C7B /* CBTextfieldCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 737732FB1BA8028500566C7B /* CBTextfieldCell.m */; };
-		73A321E11BB263DC0005F7F4 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73A321B01BB263DC0005F7F4 /* FBSDKCoreKit.framework */; settings = {ASSET_TAGS = (); }; };
-		73A321E21BB263DC0005F7F4 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73A321B11BB263DC0005F7F4 /* FBSDKLoginKit.framework */; settings = {ASSET_TAGS = (); }; };
-		73A321E31BB263DC0005F7F4 /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73A321B21BB263DC0005F7F4 /* FBSDKShareKit.framework */; settings = {ASSET_TAGS = (); }; };
 		73A321E41BB263DC0005F7F4 /* PermissionBasicProfileFields.m in Sources */ = {isa = PBXBuildFile; fileRef = 73A321B71BB263DC0005F7F4 /* PermissionBasicProfileFields.m */; settings = {ASSET_TAGS = (); }; };
 		73A321E51BB263DC0005F7F4 /* PermissionContactInfoFields.m in Sources */ = {isa = PBXBuildFile; fileRef = 73A321B91BB263DC0005F7F4 /* PermissionContactInfoFields.m */; settings = {ASSET_TAGS = (); }; };
 		73A321E61BB263DC0005F7F4 /* PermissionEmailFields.m in Sources */ = {isa = PBXBuildFile; fileRef = 73A321BB1BB263DC0005F7F4 /* PermissionEmailFields.m */; settings = {ASSET_TAGS = (); }; };
@@ -76,6 +76,9 @@
 		7345947A1BA94FDD00CF00E7 /* CBProfessionalInfoVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBProfessionalInfoVC.m; sourceTree = "<group>"; };
 		7345947C1BA973F800CF00E7 /* CBUploadIDVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBUploadIDVC.h; sourceTree = "<group>"; };
 		7345947D1BA973F800CF00E7 /* CBUploadIDVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBUploadIDVC.m; sourceTree = "<group>"; };
+		734DEE831BB284B80004D653 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
+		734DEE841BB284B80004D653 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
+		734DEE851BB284B80004D653 /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKShareKit.framework; sourceTree = "<group>"; };
 		736487471BA02791003AF6F8 /* CBTableFooterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBTableFooterView.h; sourceTree = "<group>"; };
 		736487481BA02791003AF6F8 /* CBTableFooterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBTableFooterView.m; sourceTree = "<group>"; };
 		7364874A1BA03AEF003AF6F8 /* NSString+validation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+validation.h"; sourceTree = "<group>"; };
@@ -88,9 +91,6 @@
 		736487591BA05E62003AF6F8 /* CBAccountManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBAccountManager.m; sourceTree = "<group>"; };
 		737732FA1BA8028500566C7B /* CBTextfieldCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBTextfieldCell.h; sourceTree = "<group>"; };
 		737732FB1BA8028500566C7B /* CBTextfieldCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBTextfieldCell.m; sourceTree = "<group>"; };
-		73A321B01BB263DC0005F7F4 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
-		73A321B11BB263DC0005F7F4 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
-		73A321B21BB263DC0005F7F4 /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKShareKit.framework; sourceTree = "<group>"; };
 		73A321B51BB263DC0005F7F4 /* LinkedInIOSFields.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LinkedInIOSFields.h; sourceTree = "<group>"; };
 		73A321B61BB263DC0005F7F4 /* PermissionBasicProfileFields.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PermissionBasicProfileFields.h; sourceTree = "<group>"; };
 		73A321B71BB263DC0005F7F4 /* PermissionBasicProfileFields.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PermissionBasicProfileFields.m; sourceTree = "<group>"; };
@@ -174,9 +174,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				73A321E21BB263DC0005F7F4 /* FBSDKLoginKit.framework in Frameworks */,
-				73A321E11BB263DC0005F7F4 /* FBSDKCoreKit.framework in Frameworks */,
-				73A321E31BB263DC0005F7F4 /* FBSDKShareKit.framework in Frameworks */,
+				734DEE871BB284B80004D653 /* FBSDKLoginKit.framework in Frameworks */,
+				734DEE861BB284B80004D653 /* FBSDKCoreKit.framework in Frameworks */,
+				734DEE881BB284B80004D653 /* FBSDKShareKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -262,9 +262,9 @@
 		73A321AF1BB263DC0005F7F4 /* Facebook */ = {
 			isa = PBXGroup;
 			children = (
-				73A321B01BB263DC0005F7F4 /* FBSDKCoreKit.framework */,
-				73A321B11BB263DC0005F7F4 /* FBSDKLoginKit.framework */,
-				73A321B21BB263DC0005F7F4 /* FBSDKShareKit.framework */,
+				734DEE831BB284B80004D653 /* FBSDKCoreKit.framework */,
+				734DEE841BB284B80004D653 /* FBSDKLoginKit.framework */,
+				734DEE851BB284B80004D653 /* FBSDKShareKit.framework */,
 			);
 			path = Facebook;
 			sourceTree = "<group>";
@@ -775,6 +775,8 @@
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/Third",
 					Party/Facebook,
+					"$(PROJECT_DIR)/Third",
+					Party/Facebook,
 				);
 				INFOPLIST_FILE = Cablo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -790,6 +792,8 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Third",
+					Party/Facebook,
 					"$(PROJECT_DIR)/Third",
 					Party/Facebook,
 				);
