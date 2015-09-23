@@ -1,0 +1,866 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		730ED2021BB16D950004391D /* CBWebServiceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 730ED2011BB16D950004391D /* CBWebServiceManager.m */; settings = {ASSET_TAGS = (); }; };
+		7345947B1BA94FDD00CF00E7 /* CBProfessionalInfoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7345947A1BA94FDD00CF00E7 /* CBProfessionalInfoVC.m */; };
+		7345947E1BA973F800CF00E7 /* CBUploadIDVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7345947D1BA973F800CF00E7 /* CBUploadIDVC.m */; };
+		736487491BA02791003AF6F8 /* CBTableFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 736487481BA02791003AF6F8 /* CBTableFooterView.m */; };
+		7364874C1BA03AEF003AF6F8 /* NSString+validation.m in Sources */ = {isa = PBXBuildFile; fileRef = 7364874B1BA03AEF003AF6F8 /* NSString+validation.m */; };
+		736487521BA0419B003AF6F8 /* CBVerifyOTPVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 736487511BA0419B003AF6F8 /* CBVerifyOTPVC.m */; };
+		736487561BA045E8003AF6F8 /* CBVerifyPhoneNumberCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 736487551BA045E8003AF6F8 /* CBVerifyPhoneNumberCell.m */; };
+		7364875A1BA05E62003AF6F8 /* CBAccountManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 736487591BA05E62003AF6F8 /* CBAccountManager.m */; };
+		737732FC1BA8028500566C7B /* CBTextfieldCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 737732FB1BA8028500566C7B /* CBTextfieldCell.m */; };
+		73A321E11BB263DC0005F7F4 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73A321B01BB263DC0005F7F4 /* FBSDKCoreKit.framework */; settings = {ASSET_TAGS = (); }; };
+		73A321E21BB263DC0005F7F4 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73A321B11BB263DC0005F7F4 /* FBSDKLoginKit.framework */; settings = {ASSET_TAGS = (); }; };
+		73A321E31BB263DC0005F7F4 /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73A321B21BB263DC0005F7F4 /* FBSDKShareKit.framework */; settings = {ASSET_TAGS = (); }; };
+		73A321E41BB263DC0005F7F4 /* PermissionBasicProfileFields.m in Sources */ = {isa = PBXBuildFile; fileRef = 73A321B71BB263DC0005F7F4 /* PermissionBasicProfileFields.m */; settings = {ASSET_TAGS = (); }; };
+		73A321E51BB263DC0005F7F4 /* PermissionContactInfoFields.m in Sources */ = {isa = PBXBuildFile; fileRef = 73A321B91BB263DC0005F7F4 /* PermissionContactInfoFields.m */; settings = {ASSET_TAGS = (); }; };
+		73A321E61BB263DC0005F7F4 /* PermissionEmailFields.m in Sources */ = {isa = PBXBuildFile; fileRef = 73A321BB1BB263DC0005F7F4 /* PermissionEmailFields.m */; settings = {ASSET_TAGS = (); }; };
+		73A321E71BB263DC0005F7F4 /* PermissionFullProfileFields.m in Sources */ = {isa = PBXBuildFile; fileRef = 73A321BD1BB263DC0005F7F4 /* PermissionFullProfileFields.m */; settings = {ASSET_TAGS = (); }; };
+		73A321E81BB263DC0005F7F4 /* PermissionNetworkFields.m in Sources */ = {isa = PBXBuildFile; fileRef = 73A321BF1BB263DC0005F7F4 /* PermissionNetworkFields.m */; settings = {ASSET_TAGS = (); }; };
+		73A321E91BB263DC0005F7F4 /* LinkedInAppSettings.m in Sources */ = {isa = PBXBuildFile; fileRef = 73A321C21BB263DC0005F7F4 /* LinkedInAppSettings.m */; settings = {ASSET_TAGS = (); }; };
+		73A321EA1BB263DC0005F7F4 /* LinkedInAuthorizationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 73A321C41BB263DC0005F7F4 /* LinkedInAuthorizationViewController.m */; settings = {ASSET_TAGS = (); }; };
+		73A321EB1BB263DC0005F7F4 /* LinkedInConnectionHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 73A321C61BB263DC0005F7F4 /* LinkedInConnectionHandler.m */; settings = {ASSET_TAGS = (); }; };
+		73A321EC1BB263DC0005F7F4 /* LinkedInHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 73A321C81BB263DC0005F7F4 /* LinkedInHelper.m */; settings = {ASSET_TAGS = (); }; };
+		73A321ED1BB263DC0005F7F4 /* LinkedInServiceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 73A321CA1BB263DC0005F7F4 /* LinkedInServiceManager.m */; settings = {ASSET_TAGS = (); }; };
+		73A321EE1BB263DC0005F7F4 /* LinkedinSimpleKeychain.m in Sources */ = {isa = PBXBuildFile; fileRef = 73A321CC1BB263DC0005F7F4 /* LinkedinSimpleKeychain.m */; settings = {ASSET_TAGS = (); }; };
+		73A321EF1BB263DC0005F7F4 /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 73A321CF1BB263DC0005F7F4 /* AFHTTPRequestOperation.m */; settings = {ASSET_TAGS = (); }; };
+		73A321F01BB263DC0005F7F4 /* AFHTTPRequestOperationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 73A321D11BB263DC0005F7F4 /* AFHTTPRequestOperationManager.m */; settings = {ASSET_TAGS = (); }; };
+		73A321F11BB263DC0005F7F4 /* AFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 73A321D31BB263DC0005F7F4 /* AFHTTPSessionManager.m */; settings = {ASSET_TAGS = (); }; };
+		73A321F21BB263DC0005F7F4 /* AFNetworkReachabilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 73A321D61BB263DC0005F7F4 /* AFNetworkReachabilityManager.m */; settings = {ASSET_TAGS = (); }; };
+		73A321F31BB263DC0005F7F4 /* AFSecurityPolicy.m in Sources */ = {isa = PBXBuildFile; fileRef = 73A321D81BB263DC0005F7F4 /* AFSecurityPolicy.m */; settings = {ASSET_TAGS = (); }; };
+		73A321F41BB263DC0005F7F4 /* AFURLConnectionOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 73A321DA1BB263DC0005F7F4 /* AFURLConnectionOperation.m */; settings = {ASSET_TAGS = (); }; };
+		73A321F51BB263DC0005F7F4 /* AFURLRequestSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 73A321DC1BB263DC0005F7F4 /* AFURLRequestSerialization.m */; settings = {ASSET_TAGS = (); }; };
+		73A321F61BB263DC0005F7F4 /* AFURLResponseSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 73A321DE1BB263DC0005F7F4 /* AFURLResponseSerialization.m */; settings = {ASSET_TAGS = (); }; };
+		73A321F71BB263DC0005F7F4 /* AFURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 73A321E01BB263DC0005F7F4 /* AFURLSessionManager.m */; settings = {ASSET_TAGS = (); }; };
+		73A321FB1BB269FC0005F7F4 /* CBToast.m in Sources */ = {isa = PBXBuildFile; fileRef = 73A321FA1BB269FC0005F7F4 /* CBToast.m */; settings = {ASSET_TAGS = (); }; };
+		73DF94171BA16A1600B11D5B /* CBSocialLoginVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 73DF94161BA16A1600B11D5B /* CBSocialLoginVC.m */; };
+		73E027081BA6DC2A00CFAB41 /* CBSocialTableHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 73E027071BA6DC2A00CFAB41 /* CBSocialTableHeaderView.m */; };
+		B6ECB5A31B9ED21A008F5C42 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B6ECB5A21B9ED21A008F5C42 /* main.m */; };
+		B6ECB5A61B9ED21A008F5C42 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B6ECB5A51B9ED21A008F5C42 /* AppDelegate.m */; };
+		B6ECB5AC1B9ED21A008F5C42 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6ECB5AA1B9ED21A008F5C42 /* Main.storyboard */; };
+		B6ECB5AE1B9ED21A008F5C42 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B6ECB5AD1B9ED21A008F5C42 /* Images.xcassets */; };
+		B6ECB5B11B9ED21A008F5C42 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = B6ECB5AF1B9ED21A008F5C42 /* LaunchScreen.xib */; };
+		B6ECB5BD1B9ED21A008F5C42 /* CabloTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B6ECB5BC1B9ED21A008F5C42 /* CabloTests.m */; };
+		B6ECB5C81B9EE433008F5C42 /* CBHomeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B6ECB5C71B9EE433008F5C42 /* CBHomeVC.m */; };
+		B6ECB5CF1B9EE9B5008F5C42 /* CBUserRegistrationVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B6ECB5CE1B9EE9B5008F5C42 /* CBUserRegistrationVC.m */; };
+		B6ECB5D11B9EEAD6008F5C42 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B6ECB5D01B9EEAD6008F5C42 /* Localizable.strings */; };
+		B6ECB5D61B9EEE70008F5C42 /* CBTableHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = B6ECB5D51B9EEE70008F5C42 /* CBTableHeaderView.m */; };
+		B6ECB5DD1B9EEF48008F5C42 /* CBUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = B6ECB5DC1B9EEF48008F5C42 /* CBUtility.m */; };
+		B6ECB5E51B9F0F4C008F5C42 /* CBTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = B6ECB5E41B9F0F4C008F5C42 /* CBTextField.m */; };
+		B6ECB5E81B9F100D008F5C42 /* CBKeyboardAccessoryView.m in Sources */ = {isa = PBXBuildFile; fileRef = B6ECB5E71B9F100D008F5C42 /* CBKeyboardAccessoryView.m */; };
+		B6ECB5EB1B9F110C008F5C42 /* CBTextfieldTitleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B6ECB5EA1B9F110C008F5C42 /* CBTextfieldTitleCell.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B6ECB5B71B9ED21A008F5C42 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B6ECB5951B9ED21A008F5C42 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B6ECB59C1B9ED21A008F5C42;
+			remoteInfo = Cablo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		730ED2001BB16D950004391D /* CBWebServiceManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBWebServiceManager.h; sourceTree = "<group>"; };
+		730ED2011BB16D950004391D /* CBWebServiceManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBWebServiceManager.m; sourceTree = "<group>"; };
+		730ED2031BB16E6D0004391D /* CBWebEngineConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CBWebEngineConstants.h; sourceTree = "<group>"; };
+		734594791BA94FDD00CF00E7 /* CBProfessionalInfoVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBProfessionalInfoVC.h; sourceTree = "<group>"; };
+		7345947A1BA94FDD00CF00E7 /* CBProfessionalInfoVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBProfessionalInfoVC.m; sourceTree = "<group>"; };
+		7345947C1BA973F800CF00E7 /* CBUploadIDVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBUploadIDVC.h; sourceTree = "<group>"; };
+		7345947D1BA973F800CF00E7 /* CBUploadIDVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBUploadIDVC.m; sourceTree = "<group>"; };
+		736487471BA02791003AF6F8 /* CBTableFooterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBTableFooterView.h; sourceTree = "<group>"; };
+		736487481BA02791003AF6F8 /* CBTableFooterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBTableFooterView.m; sourceTree = "<group>"; };
+		7364874A1BA03AEF003AF6F8 /* NSString+validation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+validation.h"; sourceTree = "<group>"; };
+		7364874B1BA03AEF003AF6F8 /* NSString+validation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+validation.m"; sourceTree = "<group>"; };
+		736487501BA0419B003AF6F8 /* CBVerifyOTPVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBVerifyOTPVC.h; sourceTree = "<group>"; };
+		736487511BA0419B003AF6F8 /* CBVerifyOTPVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBVerifyOTPVC.m; sourceTree = "<group>"; };
+		736487541BA045E8003AF6F8 /* CBVerifyPhoneNumberCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBVerifyPhoneNumberCell.h; sourceTree = "<group>"; };
+		736487551BA045E8003AF6F8 /* CBVerifyPhoneNumberCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBVerifyPhoneNumberCell.m; sourceTree = "<group>"; };
+		736487581BA05E62003AF6F8 /* CBAccountManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBAccountManager.h; sourceTree = "<group>"; };
+		736487591BA05E62003AF6F8 /* CBAccountManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBAccountManager.m; sourceTree = "<group>"; };
+		737732FA1BA8028500566C7B /* CBTextfieldCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBTextfieldCell.h; sourceTree = "<group>"; };
+		737732FB1BA8028500566C7B /* CBTextfieldCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBTextfieldCell.m; sourceTree = "<group>"; };
+		73A321B01BB263DC0005F7F4 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
+		73A321B11BB263DC0005F7F4 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
+		73A321B21BB263DC0005F7F4 /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKShareKit.framework; sourceTree = "<group>"; };
+		73A321B51BB263DC0005F7F4 /* LinkedInIOSFields.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LinkedInIOSFields.h; sourceTree = "<group>"; };
+		73A321B61BB263DC0005F7F4 /* PermissionBasicProfileFields.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PermissionBasicProfileFields.h; sourceTree = "<group>"; };
+		73A321B71BB263DC0005F7F4 /* PermissionBasicProfileFields.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PermissionBasicProfileFields.m; sourceTree = "<group>"; };
+		73A321B81BB263DC0005F7F4 /* PermissionContactInfoFields.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PermissionContactInfoFields.h; sourceTree = "<group>"; };
+		73A321B91BB263DC0005F7F4 /* PermissionContactInfoFields.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PermissionContactInfoFields.m; sourceTree = "<group>"; };
+		73A321BA1BB263DC0005F7F4 /* PermissionEmailFields.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PermissionEmailFields.h; sourceTree = "<group>"; };
+		73A321BB1BB263DC0005F7F4 /* PermissionEmailFields.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PermissionEmailFields.m; sourceTree = "<group>"; };
+		73A321BC1BB263DC0005F7F4 /* PermissionFullProfileFields.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PermissionFullProfileFields.h; sourceTree = "<group>"; };
+		73A321BD1BB263DC0005F7F4 /* PermissionFullProfileFields.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PermissionFullProfileFields.m; sourceTree = "<group>"; };
+		73A321BE1BB263DC0005F7F4 /* PermissionNetworkFields.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PermissionNetworkFields.h; sourceTree = "<group>"; };
+		73A321BF1BB263DC0005F7F4 /* PermissionNetworkFields.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PermissionNetworkFields.m; sourceTree = "<group>"; };
+		73A321C11BB263DC0005F7F4 /* LinkedInAppSettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LinkedInAppSettings.h; sourceTree = "<group>"; };
+		73A321C21BB263DC0005F7F4 /* LinkedInAppSettings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LinkedInAppSettings.m; sourceTree = "<group>"; };
+		73A321C31BB263DC0005F7F4 /* LinkedInAuthorizationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LinkedInAuthorizationViewController.h; sourceTree = "<group>"; };
+		73A321C41BB263DC0005F7F4 /* LinkedInAuthorizationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LinkedInAuthorizationViewController.m; sourceTree = "<group>"; };
+		73A321C51BB263DC0005F7F4 /* LinkedInConnectionHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LinkedInConnectionHandler.h; sourceTree = "<group>"; };
+		73A321C61BB263DC0005F7F4 /* LinkedInConnectionHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LinkedInConnectionHandler.m; sourceTree = "<group>"; };
+		73A321C71BB263DC0005F7F4 /* LinkedInHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LinkedInHelper.h; sourceTree = "<group>"; };
+		73A321C81BB263DC0005F7F4 /* LinkedInHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LinkedInHelper.m; sourceTree = "<group>"; };
+		73A321C91BB263DC0005F7F4 /* LinkedInServiceManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LinkedInServiceManager.h; sourceTree = "<group>"; };
+		73A321CA1BB263DC0005F7F4 /* LinkedInServiceManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LinkedInServiceManager.m; sourceTree = "<group>"; };
+		73A321CB1BB263DC0005F7F4 /* LinkedinSimpleKeychain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LinkedinSimpleKeychain.h; sourceTree = "<group>"; };
+		73A321CC1BB263DC0005F7F4 /* LinkedinSimpleKeychain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LinkedinSimpleKeychain.m; sourceTree = "<group>"; };
+		73A321CE1BB263DC0005F7F4 /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperation.h; sourceTree = "<group>"; };
+		73A321CF1BB263DC0005F7F4 /* AFHTTPRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPRequestOperation.m; sourceTree = "<group>"; };
+		73A321D01BB263DC0005F7F4 /* AFHTTPRequestOperationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperationManager.h; sourceTree = "<group>"; };
+		73A321D11BB263DC0005F7F4 /* AFHTTPRequestOperationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPRequestOperationManager.m; sourceTree = "<group>"; };
+		73A321D21BB263DC0005F7F4 /* AFHTTPSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPSessionManager.h; sourceTree = "<group>"; };
+		73A321D31BB263DC0005F7F4 /* AFHTTPSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPSessionManager.m; sourceTree = "<group>"; };
+		73A321D41BB263DC0005F7F4 /* AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworking.h; sourceTree = "<group>"; };
+		73A321D51BB263DC0005F7F4 /* AFNetworkReachabilityManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworkReachabilityManager.h; sourceTree = "<group>"; };
+		73A321D61BB263DC0005F7F4 /* AFNetworkReachabilityManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFNetworkReachabilityManager.m; sourceTree = "<group>"; };
+		73A321D71BB263DC0005F7F4 /* AFSecurityPolicy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFSecurityPolicy.h; sourceTree = "<group>"; };
+		73A321D81BB263DC0005F7F4 /* AFSecurityPolicy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFSecurityPolicy.m; sourceTree = "<group>"; };
+		73A321D91BB263DC0005F7F4 /* AFURLConnectionOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLConnectionOperation.h; sourceTree = "<group>"; };
+		73A321DA1BB263DC0005F7F4 /* AFURLConnectionOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLConnectionOperation.m; sourceTree = "<group>"; };
+		73A321DB1BB263DC0005F7F4 /* AFURLRequestSerialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLRequestSerialization.h; sourceTree = "<group>"; };
+		73A321DC1BB263DC0005F7F4 /* AFURLRequestSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLRequestSerialization.m; sourceTree = "<group>"; };
+		73A321DD1BB263DC0005F7F4 /* AFURLResponseSerialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLResponseSerialization.h; sourceTree = "<group>"; };
+		73A321DE1BB263DC0005F7F4 /* AFURLResponseSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLResponseSerialization.m; sourceTree = "<group>"; };
+		73A321DF1BB263DC0005F7F4 /* AFURLSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLSessionManager.h; sourceTree = "<group>"; };
+		73A321E01BB263DC0005F7F4 /* AFURLSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLSessionManager.m; sourceTree = "<group>"; };
+		73A321F91BB269FC0005F7F4 /* CBToast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBToast.h; sourceTree = "<group>"; };
+		73A321FA1BB269FC0005F7F4 /* CBToast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBToast.m; sourceTree = "<group>"; };
+		73DF94151BA16A1600B11D5B /* CBSocialLoginVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBSocialLoginVC.h; sourceTree = "<group>"; };
+		73DF94161BA16A1600B11D5B /* CBSocialLoginVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBSocialLoginVC.m; sourceTree = "<group>"; };
+		73E027061BA6DC2A00CFAB41 /* CBSocialTableHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBSocialTableHeaderView.h; sourceTree = "<group>"; };
+		73E027071BA6DC2A00CFAB41 /* CBSocialTableHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBSocialTableHeaderView.m; sourceTree = "<group>"; };
+		B6ECB59D1B9ED21A008F5C42 /* Cablo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cablo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B6ECB5A11B9ED21A008F5C42 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B6ECB5A21B9ED21A008F5C42 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		B6ECB5A41B9ED21A008F5C42 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		B6ECB5A51B9ED21A008F5C42 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		B6ECB5AB1B9ED21A008F5C42 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B6ECB5AD1B9ED21A008F5C42 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		B6ECB5B01B9ED21A008F5C42 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		B6ECB5B61B9ED21A008F5C42 /* CabloTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CabloTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B6ECB5BB1B9ED21A008F5C42 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B6ECB5BC1B9ED21A008F5C42 /* CabloTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CabloTests.m; sourceTree = "<group>"; };
+		B6ECB5C61B9EE433008F5C42 /* CBHomeVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBHomeVC.h; sourceTree = "<group>"; };
+		B6ECB5C71B9EE433008F5C42 /* CBHomeVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBHomeVC.m; sourceTree = "<group>"; };
+		B6ECB5CD1B9EE9B5008F5C42 /* CBUserRegistrationVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBUserRegistrationVC.h; sourceTree = "<group>"; };
+		B6ECB5CE1B9EE9B5008F5C42 /* CBUserRegistrationVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBUserRegistrationVC.m; sourceTree = "<group>"; };
+		B6ECB5D01B9EEAD6008F5C42 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		B6ECB5D41B9EEE70008F5C42 /* CBTableHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBTableHeaderView.h; sourceTree = "<group>"; };
+		B6ECB5D51B9EEE70008F5C42 /* CBTableHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBTableHeaderView.m; sourceTree = "<group>"; };
+		B6ECB5DB1B9EEF48008F5C42 /* CBUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBUtility.h; sourceTree = "<group>"; };
+		B6ECB5DC1B9EEF48008F5C42 /* CBUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBUtility.m; sourceTree = "<group>"; };
+		B6ECB5DE1B9EEF55008F5C42 /* CBStyle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CBStyle.h; sourceTree = "<group>"; };
+		B6ECB5DF1B9EFD62008F5C42 /* CBConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CBConstants.h; sourceTree = "<group>"; };
+		B6ECB5E31B9F0F4C008F5C42 /* CBTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBTextField.h; sourceTree = "<group>"; };
+		B6ECB5E41B9F0F4C008F5C42 /* CBTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBTextField.m; sourceTree = "<group>"; };
+		B6ECB5E61B9F100D008F5C42 /* CBKeyboardAccessoryView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBKeyboardAccessoryView.h; sourceTree = "<group>"; };
+		B6ECB5E71B9F100D008F5C42 /* CBKeyboardAccessoryView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBKeyboardAccessoryView.m; sourceTree = "<group>"; };
+		B6ECB5E91B9F110C008F5C42 /* CBTextfieldTitleCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBTextfieldTitleCell.h; sourceTree = "<group>"; };
+		B6ECB5EA1B9F110C008F5C42 /* CBTextfieldTitleCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBTextfieldTitleCell.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B6ECB59A1B9ED21A008F5C42 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				73A321E21BB263DC0005F7F4 /* FBSDKLoginKit.framework in Frameworks */,
+				73A321E11BB263DC0005F7F4 /* FBSDKCoreKit.framework in Frameworks */,
+				73A321E31BB263DC0005F7F4 /* FBSDKShareKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B6ECB5B31B9ED21A008F5C42 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		730ED1FE1BB16D5D0004391D /* Web Manager */ = {
+			isa = PBXGroup;
+			children = (
+				730ED2001BB16D950004391D /* CBWebServiceManager.h */,
+				730ED2011BB16D950004391D /* CBWebServiceManager.m */,
+			);
+			name = "Web Manager";
+			sourceTree = "<group>";
+		};
+		730ED1FF1BB16D690004391D /* Account Manager */ = {
+			isa = PBXGroup;
+			children = (
+				736487581BA05E62003AF6F8 /* CBAccountManager.h */,
+				736487591BA05E62003AF6F8 /* CBAccountManager.m */,
+			);
+			name = "Account Manager";
+			sourceTree = "<group>";
+		};
+		736487531BA045DE003AF6F8 /* CustomCell */ = {
+			isa = PBXGroup;
+			children = (
+				736487541BA045E8003AF6F8 /* CBVerifyPhoneNumberCell.h */,
+				736487551BA045E8003AF6F8 /* CBVerifyPhoneNumberCell.m */,
+				B6ECB5E91B9F110C008F5C42 /* CBTextfieldTitleCell.h */,
+				B6ECB5EA1B9F110C008F5C42 /* CBTextfieldTitleCell.m */,
+				737732FA1BA8028500566C7B /* CBTextfieldCell.h */,
+				737732FB1BA8028500566C7B /* CBTextfieldCell.m */,
+			);
+			name = CustomCell;
+			sourceTree = "<group>";
+		};
+		736487571BA05E3D003AF6F8 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				730ED1FF1BB16D690004391D /* Account Manager */,
+				730ED1FE1BB16D5D0004391D /* Web Manager */,
+			);
+			name = Managers;
+			sourceTree = "<group>";
+		};
+		737732F71BA8023600566C7B /* Header Views */ = {
+			isa = PBXGroup;
+			children = (
+				B6ECB5D41B9EEE70008F5C42 /* CBTableHeaderView.h */,
+				B6ECB5D51B9EEE70008F5C42 /* CBTableHeaderView.m */,
+				73E027061BA6DC2A00CFAB41 /* CBSocialTableHeaderView.h */,
+				73E027071BA6DC2A00CFAB41 /* CBSocialTableHeaderView.m */,
+			);
+			name = "Header Views";
+			sourceTree = "<group>";
+		};
+		737732F81BA8024600566C7B /* Footer View */ = {
+			isa = PBXGroup;
+			children = (
+				736487471BA02791003AF6F8 /* CBTableFooterView.h */,
+				736487481BA02791003AF6F8 /* CBTableFooterView.m */,
+			);
+			name = "Footer View";
+			sourceTree = "<group>";
+		};
+		737732F91BA8025200566C7B /* Keyboard Accessory View */ = {
+			isa = PBXGroup;
+			children = (
+				B6ECB5E61B9F100D008F5C42 /* CBKeyboardAccessoryView.h */,
+				B6ECB5E71B9F100D008F5C42 /* CBKeyboardAccessoryView.m */,
+			);
+			name = "Keyboard Accessory View";
+			sourceTree = "<group>";
+		};
+		73A321AF1BB263DC0005F7F4 /* Facebook */ = {
+			isa = PBXGroup;
+			children = (
+				73A321B01BB263DC0005F7F4 /* FBSDKCoreKit.framework */,
+				73A321B11BB263DC0005F7F4 /* FBSDKLoginKit.framework */,
+				73A321B21BB263DC0005F7F4 /* FBSDKShareKit.framework */,
+			);
+			path = Facebook;
+			sourceTree = "<group>";
+		};
+		73A321B31BB263DC0005F7F4 /* LinkedInIOSHelper */ = {
+			isa = PBXGroup;
+			children = (
+				73A321B41BB263DC0005F7F4 /* Constants */,
+				73A321C01BB263DC0005F7F4 /* LinkedInHelper */,
+			);
+			path = LinkedInIOSHelper;
+			sourceTree = "<group>";
+		};
+		73A321B41BB263DC0005F7F4 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				73A321B51BB263DC0005F7F4 /* LinkedInIOSFields.h */,
+				73A321B61BB263DC0005F7F4 /* PermissionBasicProfileFields.h */,
+				73A321B71BB263DC0005F7F4 /* PermissionBasicProfileFields.m */,
+				73A321B81BB263DC0005F7F4 /* PermissionContactInfoFields.h */,
+				73A321B91BB263DC0005F7F4 /* PermissionContactInfoFields.m */,
+				73A321BA1BB263DC0005F7F4 /* PermissionEmailFields.h */,
+				73A321BB1BB263DC0005F7F4 /* PermissionEmailFields.m */,
+				73A321BC1BB263DC0005F7F4 /* PermissionFullProfileFields.h */,
+				73A321BD1BB263DC0005F7F4 /* PermissionFullProfileFields.m */,
+				73A321BE1BB263DC0005F7F4 /* PermissionNetworkFields.h */,
+				73A321BF1BB263DC0005F7F4 /* PermissionNetworkFields.m */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		73A321C01BB263DC0005F7F4 /* LinkedInHelper */ = {
+			isa = PBXGroup;
+			children = (
+				73A321C11BB263DC0005F7F4 /* LinkedInAppSettings.h */,
+				73A321C21BB263DC0005F7F4 /* LinkedInAppSettings.m */,
+				73A321C31BB263DC0005F7F4 /* LinkedInAuthorizationViewController.h */,
+				73A321C41BB263DC0005F7F4 /* LinkedInAuthorizationViewController.m */,
+				73A321C51BB263DC0005F7F4 /* LinkedInConnectionHandler.h */,
+				73A321C61BB263DC0005F7F4 /* LinkedInConnectionHandler.m */,
+				73A321C71BB263DC0005F7F4 /* LinkedInHelper.h */,
+				73A321C81BB263DC0005F7F4 /* LinkedInHelper.m */,
+				73A321C91BB263DC0005F7F4 /* LinkedInServiceManager.h */,
+				73A321CA1BB263DC0005F7F4 /* LinkedInServiceManager.m */,
+				73A321CB1BB263DC0005F7F4 /* LinkedinSimpleKeychain.h */,
+				73A321CC1BB263DC0005F7F4 /* LinkedinSimpleKeychain.m */,
+			);
+			path = LinkedInHelper;
+			sourceTree = "<group>";
+		};
+		73A321CD1BB263DC0005F7F4 /* AFNetworking */ = {
+			isa = PBXGroup;
+			children = (
+				73A321CE1BB263DC0005F7F4 /* AFHTTPRequestOperation.h */,
+				73A321CF1BB263DC0005F7F4 /* AFHTTPRequestOperation.m */,
+				73A321D01BB263DC0005F7F4 /* AFHTTPRequestOperationManager.h */,
+				73A321D11BB263DC0005F7F4 /* AFHTTPRequestOperationManager.m */,
+				73A321D21BB263DC0005F7F4 /* AFHTTPSessionManager.h */,
+				73A321D31BB263DC0005F7F4 /* AFHTTPSessionManager.m */,
+				73A321D41BB263DC0005F7F4 /* AFNetworking.h */,
+				73A321D51BB263DC0005F7F4 /* AFNetworkReachabilityManager.h */,
+				73A321D61BB263DC0005F7F4 /* AFNetworkReachabilityManager.m */,
+				73A321D71BB263DC0005F7F4 /* AFSecurityPolicy.h */,
+				73A321D81BB263DC0005F7F4 /* AFSecurityPolicy.m */,
+				73A321D91BB263DC0005F7F4 /* AFURLConnectionOperation.h */,
+				73A321DA1BB263DC0005F7F4 /* AFURLConnectionOperation.m */,
+				73A321DB1BB263DC0005F7F4 /* AFURLRequestSerialization.h */,
+				73A321DC1BB263DC0005F7F4 /* AFURLRequestSerialization.m */,
+				73A321DD1BB263DC0005F7F4 /* AFURLResponseSerialization.h */,
+				73A321DE1BB263DC0005F7F4 /* AFURLResponseSerialization.m */,
+				73A321DF1BB263DC0005F7F4 /* AFURLSessionManager.h */,
+				73A321E01BB263DC0005F7F4 /* AFURLSessionManager.m */,
+			);
+			path = AFNetworking;
+			sourceTree = "<group>";
+		};
+		73A321F81BB269E60005F7F4 /* Toast */ = {
+			isa = PBXGroup;
+			children = (
+				73A321F91BB269FC0005F7F4 /* CBToast.h */,
+				73A321FA1BB269FC0005F7F4 /* CBToast.m */,
+			);
+			path = Toast;
+			sourceTree = "<group>";
+		};
+		73DF940D1BA167E200B11D5B /* Third Party */ = {
+			isa = PBXGroup;
+			children = (
+				73A321AF1BB263DC0005F7F4 /* Facebook */,
+				73A321B31BB263DC0005F7F4 /* LinkedInIOSHelper */,
+				73A321CD1BB263DC0005F7F4 /* AFNetworking */,
+			);
+			path = "Third Party";
+			sourceTree = "<group>";
+		};
+		B6ECB5941B9ED21A008F5C42 = {
+			isa = PBXGroup;
+			children = (
+				73DF940D1BA167E200B11D5B /* Third Party */,
+				B6ECB59F1B9ED21A008F5C42 /* Cablo */,
+				B6ECB5B91B9ED21A008F5C42 /* CabloTests */,
+				B6ECB59E1B9ED21A008F5C42 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B6ECB59E1B9ED21A008F5C42 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B6ECB59D1B9ED21A008F5C42 /* Cablo.app */,
+				B6ECB5B61B9ED21A008F5C42 /* CabloTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B6ECB59F1B9ED21A008F5C42 /* Cablo */ = {
+			isa = PBXGroup;
+			children = (
+				73A321F81BB269E60005F7F4 /* Toast */,
+				736487571BA05E3D003AF6F8 /* Managers */,
+				B6ECB5D71B9EEEF4008F5C42 /* Utility, Style */,
+				B6ECB5C91B9EE439008F5C42 /* UI */,
+				B6ECB5CA1B9EE443008F5C42 /* App Delegate */,
+				B6ECB5AA1B9ED21A008F5C42 /* Main.storyboard */,
+				B6ECB5AD1B9ED21A008F5C42 /* Images.xcassets */,
+				B6ECB5AF1B9ED21A008F5C42 /* LaunchScreen.xib */,
+				B6ECB5A01B9ED21A008F5C42 /* Supporting Files */,
+				B6ECB5D21B9EEAFC008F5C42 /* Localization */,
+			);
+			path = Cablo;
+			sourceTree = "<group>";
+		};
+		B6ECB5A01B9ED21A008F5C42 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B6ECB5A11B9ED21A008F5C42 /* Info.plist */,
+				B6ECB5A21B9ED21A008F5C42 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B6ECB5B91B9ED21A008F5C42 /* CabloTests */ = {
+			isa = PBXGroup;
+			children = (
+				B6ECB5BC1B9ED21A008F5C42 /* CabloTests.m */,
+				B6ECB5BA1B9ED21A008F5C42 /* Supporting Files */,
+			);
+			path = CabloTests;
+			sourceTree = "<group>";
+		};
+		B6ECB5BA1B9ED21A008F5C42 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B6ECB5BB1B9ED21A008F5C42 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B6ECB5C91B9EE439008F5C42 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				B6ECB5D31B9EEC09008F5C42 /* Common Elements */,
+				B6ECB5CC1B9EE463008F5C42 /* Login/SignUp */,
+				B6ECB5CB1B9EE452008F5C42 /* Home */,
+			);
+			name = UI;
+			sourceTree = "<group>";
+		};
+		B6ECB5CA1B9EE443008F5C42 /* App Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				B6ECB5A41B9ED21A008F5C42 /* AppDelegate.h */,
+				B6ECB5A51B9ED21A008F5C42 /* AppDelegate.m */,
+			);
+			name = "App Delegate";
+			sourceTree = "<group>";
+		};
+		B6ECB5CB1B9EE452008F5C42 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				B6ECB5C61B9EE433008F5C42 /* CBHomeVC.h */,
+				B6ECB5C71B9EE433008F5C42 /* CBHomeVC.m */,
+			);
+			name = Home;
+			sourceTree = "<group>";
+		};
+		B6ECB5CC1B9EE463008F5C42 /* Login/SignUp */ = {
+			isa = PBXGroup;
+			children = (
+				B6ECB5CD1B9EE9B5008F5C42 /* CBUserRegistrationVC.h */,
+				B6ECB5CE1B9EE9B5008F5C42 /* CBUserRegistrationVC.m */,
+				736487501BA0419B003AF6F8 /* CBVerifyOTPVC.h */,
+				736487511BA0419B003AF6F8 /* CBVerifyOTPVC.m */,
+				73DF94151BA16A1600B11D5B /* CBSocialLoginVC.h */,
+				73DF94161BA16A1600B11D5B /* CBSocialLoginVC.m */,
+				734594791BA94FDD00CF00E7 /* CBProfessionalInfoVC.h */,
+				7345947A1BA94FDD00CF00E7 /* CBProfessionalInfoVC.m */,
+				7345947C1BA973F800CF00E7 /* CBUploadIDVC.h */,
+				7345947D1BA973F800CF00E7 /* CBUploadIDVC.m */,
+			);
+			name = Login/SignUp;
+			sourceTree = "<group>";
+		};
+		B6ECB5D21B9EEAFC008F5C42 /* Localization */ = {
+			isa = PBXGroup;
+			children = (
+				B6ECB5D01B9EEAD6008F5C42 /* Localizable.strings */,
+			);
+			name = Localization;
+			sourceTree = "<group>";
+		};
+		B6ECB5D31B9EEC09008F5C42 /* Common Elements */ = {
+			isa = PBXGroup;
+			children = (
+				737732F91BA8025200566C7B /* Keyboard Accessory View */,
+				B6ECB5E31B9F0F4C008F5C42 /* CBTextField.h */,
+				B6ECB5E41B9F0F4C008F5C42 /* CBTextField.m */,
+				737732F71BA8023600566C7B /* Header Views */,
+				736487531BA045DE003AF6F8 /* CustomCell */,
+				737732F81BA8024600566C7B /* Footer View */,
+			);
+			name = "Common Elements";
+			sourceTree = "<group>";
+		};
+		B6ECB5D71B9EEEF4008F5C42 /* Utility, Style */ = {
+			isa = PBXGroup;
+			children = (
+				7364874A1BA03AEF003AF6F8 /* NSString+validation.h */,
+				7364874B1BA03AEF003AF6F8 /* NSString+validation.m */,
+				B6ECB5DB1B9EEF48008F5C42 /* CBUtility.h */,
+				B6ECB5DC1B9EEF48008F5C42 /* CBUtility.m */,
+				B6ECB5DE1B9EEF55008F5C42 /* CBStyle.h */,
+				B6ECB5DF1B9EFD62008F5C42 /* CBConstants.h */,
+				730ED2031BB16E6D0004391D /* CBWebEngineConstants.h */,
+			);
+			name = "Utility, Style";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B6ECB59C1B9ED21A008F5C42 /* Cablo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B6ECB5C01B9ED21A008F5C42 /* Build configuration list for PBXNativeTarget "Cablo" */;
+			buildPhases = (
+				B6ECB5991B9ED21A008F5C42 /* Sources */,
+				B6ECB59A1B9ED21A008F5C42 /* Frameworks */,
+				B6ECB59B1B9ED21A008F5C42 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Cablo;
+			productName = Cablo;
+			productReference = B6ECB59D1B9ED21A008F5C42 /* Cablo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B6ECB5B51B9ED21A008F5C42 /* CabloTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B6ECB5C31B9ED21A008F5C42 /* Build configuration list for PBXNativeTarget "CabloTests" */;
+			buildPhases = (
+				B6ECB5B21B9ED21A008F5C42 /* Sources */,
+				B6ECB5B31B9ED21A008F5C42 /* Frameworks */,
+				B6ECB5B41B9ED21A008F5C42 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B6ECB5B81B9ED21A008F5C42 /* PBXTargetDependency */,
+			);
+			name = CabloTests;
+			productName = CabloTests;
+			productReference = B6ECB5B61B9ED21A008F5C42 /* CabloTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B6ECB5951B9ED21A008F5C42 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0700;
+				ORGANIZATIONNAME = iAppStreet;
+				TargetAttributes = {
+					B6ECB59C1B9ED21A008F5C42 = {
+						CreatedOnToolsVersion = 6.4;
+					};
+					B6ECB5B51B9ED21A008F5C42 = {
+						CreatedOnToolsVersion = 6.4;
+						TestTargetID = B6ECB59C1B9ED21A008F5C42;
+					};
+				};
+			};
+			buildConfigurationList = B6ECB5981B9ED21A008F5C42 /* Build configuration list for PBXProject "Cablo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B6ECB5941B9ED21A008F5C42;
+			productRefGroup = B6ECB59E1B9ED21A008F5C42 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B6ECB59C1B9ED21A008F5C42 /* Cablo */,
+				B6ECB5B51B9ED21A008F5C42 /* CabloTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B6ECB59B1B9ED21A008F5C42 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B6ECB5AC1B9ED21A008F5C42 /* Main.storyboard in Resources */,
+				B6ECB5D11B9EEAD6008F5C42 /* Localizable.strings in Resources */,
+				B6ECB5B11B9ED21A008F5C42 /* LaunchScreen.xib in Resources */,
+				B6ECB5AE1B9ED21A008F5C42 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B6ECB5B41B9ED21A008F5C42 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B6ECB5991B9ED21A008F5C42 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				73A321E81BB263DC0005F7F4 /* PermissionNetworkFields.m in Sources */,
+				B6ECB5A61B9ED21A008F5C42 /* AppDelegate.m in Sources */,
+				73A321EB1BB263DC0005F7F4 /* LinkedInConnectionHandler.m in Sources */,
+				736487561BA045E8003AF6F8 /* CBVerifyPhoneNumberCell.m in Sources */,
+				73A321E41BB263DC0005F7F4 /* PermissionBasicProfileFields.m in Sources */,
+				73A321F01BB263DC0005F7F4 /* AFHTTPRequestOperationManager.m in Sources */,
+				B6ECB5D61B9EEE70008F5C42 /* CBTableHeaderView.m in Sources */,
+				B6ECB5CF1B9EE9B5008F5C42 /* CBUserRegistrationVC.m in Sources */,
+				73A321E61BB263DC0005F7F4 /* PermissionEmailFields.m in Sources */,
+				736487491BA02791003AF6F8 /* CBTableFooterView.m in Sources */,
+				736487521BA0419B003AF6F8 /* CBVerifyOTPVC.m in Sources */,
+				737732FC1BA8028500566C7B /* CBTextfieldCell.m in Sources */,
+				73A321E91BB263DC0005F7F4 /* LinkedInAppSettings.m in Sources */,
+				730ED2021BB16D950004391D /* CBWebServiceManager.m in Sources */,
+				B6ECB5DD1B9EEF48008F5C42 /* CBUtility.m in Sources */,
+				73A321F11BB263DC0005F7F4 /* AFHTTPSessionManager.m in Sources */,
+				73DF94171BA16A1600B11D5B /* CBSocialLoginVC.m in Sources */,
+				73A321F21BB263DC0005F7F4 /* AFNetworkReachabilityManager.m in Sources */,
+				73A321EE1BB263DC0005F7F4 /* LinkedinSimpleKeychain.m in Sources */,
+				73A321F41BB263DC0005F7F4 /* AFURLConnectionOperation.m in Sources */,
+				7345947B1BA94FDD00CF00E7 /* CBProfessionalInfoVC.m in Sources */,
+				73E027081BA6DC2A00CFAB41 /* CBSocialTableHeaderView.m in Sources */,
+				73A321EC1BB263DC0005F7F4 /* LinkedInHelper.m in Sources */,
+				73A321FB1BB269FC0005F7F4 /* CBToast.m in Sources */,
+				B6ECB5EB1B9F110C008F5C42 /* CBTextfieldTitleCell.m in Sources */,
+				73A321EF1BB263DC0005F7F4 /* AFHTTPRequestOperation.m in Sources */,
+				73A321F71BB263DC0005F7F4 /* AFURLSessionManager.m in Sources */,
+				7364874C1BA03AEF003AF6F8 /* NSString+validation.m in Sources */,
+				B6ECB5C81B9EE433008F5C42 /* CBHomeVC.m in Sources */,
+				7345947E1BA973F800CF00E7 /* CBUploadIDVC.m in Sources */,
+				7364875A1BA05E62003AF6F8 /* CBAccountManager.m in Sources */,
+				73A321F31BB263DC0005F7F4 /* AFSecurityPolicy.m in Sources */,
+				73A321E51BB263DC0005F7F4 /* PermissionContactInfoFields.m in Sources */,
+				73A321F61BB263DC0005F7F4 /* AFURLResponseSerialization.m in Sources */,
+				73A321F51BB263DC0005F7F4 /* AFURLRequestSerialization.m in Sources */,
+				73A321E71BB263DC0005F7F4 /* PermissionFullProfileFields.m in Sources */,
+				73A321EA1BB263DC0005F7F4 /* LinkedInAuthorizationViewController.m in Sources */,
+				B6ECB5A31B9ED21A008F5C42 /* main.m in Sources */,
+				B6ECB5E51B9F0F4C008F5C42 /* CBTextField.m in Sources */,
+				B6ECB5E81B9F100D008F5C42 /* CBKeyboardAccessoryView.m in Sources */,
+				73A321ED1BB263DC0005F7F4 /* LinkedInServiceManager.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B6ECB5B21B9ED21A008F5C42 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B6ECB5BD1B9ED21A008F5C42 /* CabloTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B6ECB5B81B9ED21A008F5C42 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B6ECB59C1B9ED21A008F5C42 /* Cablo */;
+			targetProxy = B6ECB5B71B9ED21A008F5C42 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		B6ECB5AA1B9ED21A008F5C42 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B6ECB5AB1B9ED21A008F5C42 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		B6ECB5AF1B9ED21A008F5C42 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B6ECB5B01B9ED21A008F5C42 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B6ECB5BE1B9ED21A008F5C42 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		B6ECB5BF1B9ED21A008F5C42 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B6ECB5C11B9ED21A008F5C42 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Third",
+					Party/Facebook,
+				);
+				INFOPLIST_FILE = Cablo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.iappstreet.cablo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		B6ECB5C21B9ED21A008F5C42 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Third",
+					Party/Facebook,
+				);
+				INFOPLIST_FILE = Cablo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.iappstreet.cablo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		B6ECB5C41B9ED21A008F5C42 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = CabloTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.iappstreet.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Cablo.app/Cablo";
+			};
+			name = Debug;
+		};
+		B6ECB5C51B9ED21A008F5C42 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = CabloTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.iappstreet.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Cablo.app/Cablo";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B6ECB5981B9ED21A008F5C42 /* Build configuration list for PBXProject "Cablo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B6ECB5BE1B9ED21A008F5C42 /* Debug */,
+				B6ECB5BF1B9ED21A008F5C42 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B6ECB5C01B9ED21A008F5C42 /* Build configuration list for PBXNativeTarget "Cablo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B6ECB5C11B9ED21A008F5C42 /* Debug */,
+				B6ECB5C21B9ED21A008F5C42 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B6ECB5C31B9ED21A008F5C42 /* Build configuration list for PBXNativeTarget "CabloTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B6ECB5C41B9ED21A008F5C42 /* Debug */,
+				B6ECB5C51B9ED21A008F5C42 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B6ECB5951B9ED21A008F5C42 /* Project object */;
+}

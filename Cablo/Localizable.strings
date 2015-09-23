@@ -1,0 +1,38 @@
+/* 
+  Localizable.strings
+  Cablo
+
+  Created by iAppStreet on 08/09/15.
+  Copyright (c) 2015 iAppStreet. All rights reserved.
+*/
+
+
+// user registration
+"enter_10_digit_mobile_registration_note" = "Lets start by verifying your 10 digit Mobile number";
+//otp
+"add_registration_footer_note" = "We will send a one time password via to verify your mobile number.";
+"add_otp_footer_note" = "A one time password has been sent via SMS to the mobile number you have entered.";
+"add_otp_header_note" = "A verification code has been sent to following mobile number:";
+"enter_otp_message" = "Enter OTP sent to your Mobile number";
+
+//buttons
+"submit" = "SUBMIT";
+"resend_otp" = "Resend OTP";
+
+//sign up
+"fb_login" = "Login with facebook";
+"linkedIn_login" = "Login with linkedIn";
+"fb_or_manual" = "Login with facebook or enter details manually";
+"linkedin_or_manual" = "Login with linkedIn or enter details manually";
+// sign up personnel details
+"enter_email" = "Enter email";
+"enter_password" = "Enter password";
+"confirm_password" = "Confirm password";
+"enter_first_name" = "First name";
+"enter_last_name" = "Last name";
+
+// professional details
+"company_name" = "Enter company name";
+"designation" = "Your designation";
+
+ 
