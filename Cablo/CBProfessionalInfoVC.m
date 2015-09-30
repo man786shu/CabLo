@@ -11,7 +11,10 @@
 #import "CBTextfieldCell.h"
 #import "CBTextField.h"
 #import "CBTableFooterView.h"
+#import "CBUploadIDVC.h"
 #import "LinkedInHelper.h"
+#import "CBConstants.h"
+#import "CBToast.h"
 
 @interface CBProfessionalInfoVC ()<UITextFieldDelegate>{
     NSDictionary *linkedInAccountInfo;
@@ -19,6 +22,7 @@
 
 @property (nonatomic, strong) CBSocialTableHeaderView *tableHeader;
 @property (nonatomic, strong) CBTableFooterView *footer;
+@property (nonatomic, strong) NSString *companyName, *designation;
 
 @end
 
@@ -39,18 +43,15 @@
     [self updateFooterViewCurrentState];
 
 }
-- (void)viewWillLayoutSubviews
-{
-    [super viewWillLayoutSubviews];
-    
-}
 
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
+    
     CGSize size = self.view.bounds.size;
     self.tableHeader.frame = (CGRect){0.0,0.0,size.width, 120.0};
     self.tableView.tableHeaderView = self.tableHeader;
+    
     UIBarButtonItem *back = [[UIBarButtonItem alloc] initWithTitle:@"" style:UIBarButtonItemStylePlain target:nil action:nil];
     self.navigationItem.backBarButtonItem = back;
 }
@@ -83,7 +84,8 @@
     }
     cell.textfield.tag = row;
     cell.textfield.delegate = self;
-    [cell.textfield setPlaceholder:[self cellTitleForIndex:row]];
+    [cell.textfield setPlaceholder:[self cellPlaceholderForIndex:row]];
+    [cell.textfield setText:[self cellTitleForIndex:row]];
     cell.clipsToBounds = YES;
     return cell;
 }
@@ -92,7 +94,7 @@
     return [CBTextfieldCell heightForCell];
 }
 
-- (NSString *)cellTitleForIndex:(NSInteger)row
+- (NSString *)cellPlaceholderForIndex:(NSInteger)row
 {
     NSString * headerTitle = nil;
     if (row == 0){
@@ -107,9 +109,22 @@
     return headerTitle;
 }
 
+- (NSString *)cellTitleForIndex:(NSInteger)row{
+    if (row == 0) {
+        return _companyName;
+    }
+    else
+        return _designation;
+}
+
 #pragma mark - IBActions -
 - (IBAction)submitTapped:(id)sender{
-    
+    if ([self validateData]) {
+        [self addFieldsToDict];
+        CBUploadIDVC *uploadVC = [self.storyboard instantiateViewControllerWithIdentifier:kUploadIDVC];
+        uploadVC.params = self.params;
+        [self.navigationController pushViewController:uploadVC animated:YES];
+    }
 }
 
 - (IBAction)linkedInBtnTapped:(UIButton *)sender {
@@ -117,17 +132,17 @@
     // If user has already connected via linkedin in and access token is still valid then
     // No need to fetch authorizationCode and then accessToken again!
     
-    if (linkedIn.isValidToken) {
-        linkedIn.customSubPermissions = [NSString stringWithFormat:@"%@,%@", first_name, last_name];
-        // So Fetch member info by elderyly access token
-        [linkedIn autoFetchUserInfoWithSuccess:^(NSDictionary *userInfo) {
-            // Whole User Info
-            NSLog(@"user Info : %@", userInfo);
-        } failUserInfo:^(NSError *error) {
-            NSLog(@"error : %@", error.userInfo.description);
-        }];
-    } else {
-        
+//    if (linkedIn.isValidToken) {
+//        linkedIn.customSubPermissions = [NSString stringWithFormat:@"%@,%@", first_name, last_name];
+//        // So Fetch member info by elderyly access token
+//        [linkedIn autoFetchUserInfoWithSuccess:^(NSDictionary *userInfo) {
+//            // Whole User Info
+//            NSLog(@"user Info : %@", userInfo);
+//        } failUserInfo:^(NSError *error) {
+//            NSLog(@"error : %@", error.userInfo.description);
+//        }];
+//    } else {
+    
         linkedIn.cancelButtonText = @"Close"; // Or any other language But Default is Close
         
         NSArray *permissions = @[@(BasicProfile),
@@ -150,19 +165,22 @@
                                         linkedInAccountInfo = userInfo;
                                         // You can also fetch user's those informations like below
                                         NSLog(@"job title : %@",     [LinkedInHelper sharedInstance].title);
+                                        self.designation = [LinkedInHelper sharedInstance].title;
                                         NSLog(@"company Name : %@",  [LinkedInHelper sharedInstance].companyName);
+                                        self.companyName = [LinkedInHelper sharedInstance].companyName;
                                         NSLog(@"email address : %@", [LinkedInHelper sharedInstance].emailAddress);
                                         NSLog(@"Photo Url : %@",     [LinkedInHelper sharedInstance].photo);
                                         NSLog(@"Industry : %@",      [LinkedInHelper sharedInstance].industry);
+                                        [self.tableView reloadData];
                                     }
                                   failUserInfoBlock:^(NSError *error) {
                                       NSLog(@"error : %@", error.userInfo.description);
                                   }
          ];
-    }
+    //}
 }
 
-
+#pragma mark - footer view -
 - (void)updateFooterViewCurrentState
 {
     [self.footer.button setTitle:NSLocalizedString(@"submit", @"") forState:UIControlStateNormal];
@@ -171,5 +189,55 @@
     self.tableView.tableFooterView = self.footer;
 }
 
+#pragma mark - UITextFieldDelegate -
+
+-(BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    [self makeNextTfFirstResponder:textField.tag];
+    return YES;
+}
+
+-(void)textFieldDidEndEditing:(UITextField *)textField
+{
+    [self didTapReturn:textField];
+}
+
+- (void)makeNextTfFirstResponder:(NSInteger)index
+{
+    CBTextfieldCell *nextCell = [self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:(index+1) inSection:0]];
+    if ([nextCell isKindOfClass:[CBTextfieldCell class]]) {
+        [nextCell.textfield becomeFirstResponder];
+    }
+    else
+        [self.view endEditing:YES];
+}
+
+- (void)didTapReturn:(UITextField *)txf
+{
+    CBTextField *textfield = (CBTextField *)txf;
+    if (textfield.tag == 0) {
+        _companyName = textfield.text;
+    }
+    else if (textfield.tag == 1){
+        _designation = textfield.text;
+    }
+}
+
+- (void)addFieldsToDict{
+    [self.params setValue:self.companyName forKey:@"companyName"];
+    [self.params setValue:self.designation forKey:@"designation"];
+}
+
+
+#pragma mark - validate data
+- (BOOL)validateData
+{
+    if (_designation.length <= 0 || _companyName.length <= 0) {
+        [[CBToast shared] showToastMessage:NSLocalizedString(@"enter_all_details", @"")];
+        return false;
+    }
+  
+    return YES;
+}
 
 @end

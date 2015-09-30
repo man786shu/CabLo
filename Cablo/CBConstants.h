@@ -23,9 +23,25 @@ typedef enum {
 #define kVerifyOTPVC @"CBVerifyOTPVC"
 #define kSocialLoginVC @"CBSocialLoginVC"
 #define kProfessionalInfoVC @"CBProfessionalInfoVC"
+#define kHomeVC @"CBHomeVC"
+#define kUploadIDVC @"CBUploadIDVC"
 
 #define kMaxDigitsForPrepaidMobile 10
 #define kMaxDigitsForPostpaidMobile 10
 
+
+// USER INFO CONSTANTS
+
+#define kUserName @"name"
+#define kUserEmail @"email_id"
+#define kUserPhoneNumber @"phone_number"
+#define kUserID @"_id"
+#define kAuthToken @"auth_token"
+#define kUserImageKey @"customer_image_key"
+#define kUserImageUrl @"customer_image_url"
+#define kUserGovtIdImageKey @"customer_govt_id_image_key"
+#define kUserGovtIdImageUrl @"customer_govt_id_image_url"
+#define kVerifiedKey @"verified"
+#define kGenderKey @"gender"
 
 #endif

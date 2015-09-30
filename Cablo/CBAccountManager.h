@@ -7,12 +7,25 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
+
+@class CBError;
+@class CBUserInfo;
 
 @interface CBAccountManager : NSObject
 
-+ (CBAccountManager *)sharedManager;
+@property (nonatomic, strong) CBUserInfo *loggedInUser;
+@property (nonatomic, assign) BOOL isUserLoggedIn;
 
-- (void)requestOTPForParams:(NSDictionary *)params withCompletionHandler:(void(^) (bool success, NSError *error))completionBlock;
-- (void)verifyOTPForParams:(NSDictionary *)params withCompletionHandler:(void(^) (bool success, NSError *error))completionBlock;
++ (CBAccountManager *)sharedManager;
+- (void)updateUserAccountInfo;
+- (void)saveUserDetailsWithData:(NSDictionary *)data;
++ (void)saveData:(id)data withKey:(NSString *)key;
++ (void)removeDataForKey:(NSString *)key;
++ (id)getDataForKey:(NSString*)key;
+
+- (void)requestOTPForParams:(NSDictionary *)params withCompletionHandler:(void(^) (bool success, CBError *error))completionBlock;
+- (void)verifyOTPForParams:(NSDictionary *)params withCompletionHandler:(void(^) (bool success, bool newUser, CBError *error))completionBlock;
+- (void)createUserForParameters:(NSDictionary *)params andGovtIdImage:(UIImage *)idImage withCompletionHandler:(void(^)(bool success, CBError * error))completionBlock;
 
 @end

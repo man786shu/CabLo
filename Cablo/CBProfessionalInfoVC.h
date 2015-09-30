@@ -10,4 +10,6 @@
 
 @interface CBProfessionalInfoVC : UITableViewController
 
+@property (nonatomic, strong) NSMutableDictionary *params;
+
 @end

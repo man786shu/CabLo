@@ -55,6 +55,7 @@
 #define kSeperatorHeight 1.0 / [UIScreen mainScreen].scale
 #define kGenericNoteFont LIGHT(13.0)
 #define kFloatingButtonFont REGULAR(15.0)
+#define kBottomSubviewHeight 250.0f
 
 
 // Table View Generic

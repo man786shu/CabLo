@@ -22,6 +22,7 @@
 @implementation CBTextfieldCell
 
 - (void)awakeFromNib {
+    self.selectionStyle = UITableViewCellSelectionStyleNone;
     // Initialization code
 }
 
@@ -37,6 +38,7 @@
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self)
     {
+        self.selectionStyle = UITableViewCellSelectionStyleNone;
         _textfield = [[CBTextField alloc] initWithFrame:CGRectZero];
         _textfield.textAlignment = NSTextAlignmentCenter;
         [self.contentView addSubview:_textfield];

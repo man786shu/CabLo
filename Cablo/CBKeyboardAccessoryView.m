@@ -16,13 +16,13 @@
 @property (nonatomic, strong) UIBarButtonItem *doneButton;
 
 @property (nonatomic, strong) UIToolbar *toolBar;
-@property (nonatomic, assign) MAAccessoryViewMode mode;
+@property (nonatomic, assign) CBAccessoryViewMode mode;
 
 @end
 
 @implementation CBKeyboardAccessoryView
 
-- (id)initWithFrame:(CGRect)frame andMode:(MAAccessoryViewMode)mode
+- (id)initWithFrame:(CGRect)frame andMode:(CBAccessoryViewMode)mode
 {
     self = [super initWithFrame:frame];
     self.mode = mode;
@@ -50,7 +50,7 @@
     UIBarButtonItem *doneButton = [[UIBarButtonItem alloc] initWithTitle:@"DONE" style:UIBarButtonItemStylePlain target:self action:@selector(didTapDoneButton:)];
     
     NSArray *barItems = [[NSArray alloc] init];
-    if (self.mode == MADoneButtonOnly)
+    if (self.mode == CBDoneButtonOnly)
     {
         barItems = @[flexSpace , doneButton];
     }
@@ -60,6 +60,7 @@
     }
     
     [_toolBar setItems:barItems animated:YES];
+    [_toolBar sizeToFit];
     
     [self addSubview:_toolBar];
     

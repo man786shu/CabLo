@@ -8,6 +8,7 @@
 
 #import "CBVerifyOTPVC.h"
 #import "CBVerifyOTPVC.h"
+#import "CBHomeVC.h"
 #import "CBSocialLoginVC.h"
 #import "CBTableHeaderView.h"
 #import "CBTableFooterView.h"
@@ -21,6 +22,8 @@
 #import "NSString+validation.h"
 #import "CBAccountManager.h"
 #import "CBWebEngineConstants.h"
+#import "CBError.h"
+#import "CBToast.h"
 
 @interface CBVerifyOTPVC ()<UITextFieldDelegate, CBTextFieldDelegate, CBVerifyPhoneNumberCellDelegate, CBKeyboardAccessoryViewDelegate>
 {
@@ -104,7 +107,7 @@
             cell = [[CBTextfieldTitleCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
             cell.tf.delegate = self;
             
-            CBKeyboardAccessoryView *view = [[CBKeyboardAccessoryView alloc] initWithFrame:(CGRect) {0.0, 0.0, self.view.bounds.size.width, kKeyboardAccessoryHeight} andMode:MADoneButtonOnly];
+            CBKeyboardAccessoryView *view = [[CBKeyboardAccessoryView alloc] initWithFrame:(CGRect) {0.0, 0.0, self.view.bounds.size.width, kKeyboardAccessoryHeight} andMode:CBDoneButtonOnly];
             view.delegate = self;
             cell.tf.inputAccessoryView = view;
         }
@@ -173,26 +176,39 @@
 
 #pragma mark - IBActions -
 - (IBAction)submitTapped:(id)sender{
-    NSDictionary *params = @{@"phone_number":SANDBOX_NUMBER, @"pin":self.userOTPNumber};
-    [[CBAccountManager sharedManager] verifyOTPForParams:params withCompletionHandler:^(bool success, NSError *error) {
+    [self.view endEditing:YES];
+    //CBSocialLoginVC *socialLoginVC = [self.storyboard instantiateViewControllerWithIdentifier:kSocialLoginVC];
+   // [self.navigationController pushViewController:socialLoginVC animated:YES];
+    NSDictionary *params = @{@"phone_number":self.userMobileNumber, @"pin":self.userOTPNumber};
+    [[CBAccountManager sharedManager] verifyOTPForParams:params withCompletionHandler:^(bool success, bool newUser, CBError *error) {
         if (error) {
-            NSLog(@"error : %@",error.localizedDescription);
+            [[CBToast shared]showToastMessage:error.messageText];
         }
         else{
-            CBSocialLoginVC *socialLoginVC = [self.storyboard instantiateViewControllerWithIdentifier:kSocialLoginVC];
-            [self.navigationController pushViewController:socialLoginVC animated:YES];
+            if (newUser) {
+                CBSocialLoginVC *socialLoginVC = [self.storyboard instantiateViewControllerWithIdentifier:kSocialLoginVC];
+                socialLoginVC.userMobileNumber = self.userMobileNumber;
+                [self.navigationController pushViewController:socialLoginVC animated:YES];
+            }
+            else
+            {
+                [self dismissViewControllerAnimated:YES completion:nil];
+                //CBHomeVC *homeVC = [self.storyboard instantiateViewControllerWithIdentifier:kHomeVC];
+                //[self.navigationController pushViewController:homeVC animated:YES];
+            }
         }
     }];
 }
 
 - (IBAction)resendOTP:(id)sender{
     [self.view endEditing:YES];
-    NSDictionary *params = [[NSDictionary alloc]initWithObjectsAndKeys:SANDBOX_NUMBER,@"phone_number", nil];
-    [[CBAccountManager sharedManager]requestOTPForParams:params withCompletionHandler:^(bool success, NSError *error) {
+    NSDictionary *params = [[NSDictionary alloc]initWithObjectsAndKeys:self.userMobileNumber,@"phone_number", nil];
+    [[CBAccountManager sharedManager]requestOTPForParams:params withCompletionHandler:^(bool success, CBError *error) {
         if (success) {
         }
         else{
-            NSLog(@"error : %@",error.localizedDescription);
+            NSLog(@"error : %@",error.messageText);
+            [[CBToast shared]showToastMessage:error.messageText];;
         }
     }];
 }

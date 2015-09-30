@@ -112,7 +112,7 @@
     [self addTask:task];
 }
 
-- (void)createMultiPartRequestWithParameters:(NSDictionary *)parameters profileImage:(UIImage *)pImage withRequestPath:(NSString *)reqPath withCompletionHandler:(void(^)(id responseObject, NSError *error))completionBlock
+- (void)createMultiPartRequestWithParameters:(NSDictionary *)parameters profileImage:(UIImage *)pImage withImageName:(NSString *)imageName withRequestPath:(NSString *)reqPath withCompletionHandler:(void(^)(id responseObject, NSError *error))completionBlock
 {
     NSError *error = [self checkAndCreateInternetError];
     if (error) {
@@ -121,14 +121,14 @@
         }
         return;
     }
-    
+    NSString *imgName = [NSString stringWithFormat:@"%@.jpg",imageName];
     NSData *imageData = UIImageJPEGRepresentation(pImage, 0.8);
     
     if (!IS_OS_8_OR_LATER) {
         AFHTTPRequestOperationManager *manager = [[AFHTTPRequestOperationManager alloc] initWithBaseURL:[NSURL URLWithString:BASE_URL]];
         AFHTTPRequestOperation *op = [manager POST:reqPath parameters:parameters constructingBodyWithBlock:^(id<AFMultipartFormData> formData)
                                       {
-                                          [formData appendPartWithFileData:imageData name:@"image" fileName:@"photo.jpg" mimeType:@"image/jpeg"];
+                                          [formData appendPartWithFileData:imageData name:imageName fileName:imgName mimeType:@"image/jpeg"];
                                       } success:^(AFHTTPRequestOperation *operation, id responseObject)
                                       {
                                           if (completionBlock) {
@@ -151,7 +151,7 @@
     
     NSURLSessionDataTask *task = [self POST:reqPath parameters:parameters constructingBodyWithBlock:^(id<AFMultipartFormData> formData)
                                   {
-                                      [formData appendPartWithFileData:imageData name:@"image" fileName:@"photo.jpg" mimeType:@"image/jpeg"];
+                                      [formData appendPartWithFileData:imageData name:imageName fileName:imgName mimeType:@"image/jpeg"];
                                   } success:^(NSURLSessionDataTask *task, id responseObject)
                                   {
                                       if (completionBlock) {

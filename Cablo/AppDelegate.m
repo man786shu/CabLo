@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "CBAccountManager.h"
 
 @interface AppDelegate ()
 
@@ -25,12 +26,15 @@
     [FBSDKProfile enableUpdatesOnAccessTokenChange:YES];
     
     [self.window makeKeyAndVisible];
+    [[CBAccountManager sharedManager] updateUserAccountInfo];
+    if (![[CBAccountManager sharedManager] isUserLoggedIn]) {
     
     UIView *view = [[[NSBundle mainBundle] loadNibNamed:@"LaunchScreen" owner:nil options:nil] firstObject];
     self.splashView = view;
     
     view.frame = self.window.bounds;
     [self.window addSubview:view];
+    }
     
     return YES;
 }

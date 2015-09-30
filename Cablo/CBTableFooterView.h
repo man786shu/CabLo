@@ -22,5 +22,6 @@ typedef enum : NSUInteger {
 @property (nonatomic, strong) UIButton *resendButton;
 
 - (void)refreshFooter;
+- (void)showProgress:(BOOL)showProgress;
 
 @end

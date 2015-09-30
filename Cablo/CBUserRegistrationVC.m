@@ -18,6 +18,8 @@
 #import "NSString+validation.h"
 #import "CBAccountManager.h"
 #import "CBWebEngineConstants.h"
+#import "CBError.h"
+#import "CBToast.h"
 
 @interface CBUserRegistrationVC ()<UITextFieldDelegate,CBKeyboardAccessoryViewDelegate>
 {
@@ -85,7 +87,7 @@
         cell = [[CBTextfieldTitleCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
         cell.tf.delegate = self;
         
-        CBKeyboardAccessoryView *view = [[CBKeyboardAccessoryView alloc] initWithFrame:(CGRect) {0.0, 0.0, self.view.bounds.size.width, kKeyboardAccessoryHeight} andMode:MADoneButtonOnly];
+        CBKeyboardAccessoryView *view = [[CBKeyboardAccessoryView alloc] initWithFrame:(CGRect) {0.0, 0.0, self.view.bounds.size.width, kKeyboardAccessoryHeight} andMode:CBDoneButtonOnly];
         view.delegate = self;
         cell.tf.inputAccessoryView = view;
     }
@@ -145,18 +147,22 @@
 - (IBAction)submitTapped:(id)sender
 {
     [self.view endEditing:YES];
-    NSDictionary *params = [[NSDictionary alloc]initWithObjectsAndKeys:SANDBOX_NUMBER,@"phone_number", nil];
-    [[CBAccountManager sharedManager]requestOTPForParams:params withCompletionHandler:^(bool success, NSError *error) {
+//    CBVerifyOTPVC *verifyOTP = [self.storyboard instantiateViewControllerWithIdentifier:kVerifyOTPVC];
+//    verifyOTP.userMobileNumber = self.userMobileNumber;
+//    [self.navigationController pushViewController:verifyOTP animated:YES];
+    [self.footer showProgress:YES];
+    NSDictionary *params = [[NSDictionary alloc]initWithObjectsAndKeys:self.userMobileNumber,@"phone_number", nil];
+    [[CBAccountManager sharedManager]requestOTPForParams:params withCompletionHandler:^(bool success, CBError *error) {
+         [self.footer showProgress:NO];
         if (success) {
             CBVerifyOTPVC *verifyOTP = [self.storyboard instantiateViewControllerWithIdentifier:kVerifyOTPVC];
             verifyOTP.userMobileNumber = self.userMobileNumber;
             [self.navigationController pushViewController:verifyOTP animated:YES];
         }
         else{
-            NSLog(@"error : %@",error.localizedDescription);
+            [[CBToast shared]showToastMessage:error.messageText];
         }
     }];
-    
 }
 
 
@@ -195,10 +201,11 @@
 
 - (void)updateTfState
 {
-        CBTextfieldTitleCell *cell = (CBTextfieldTitleCell *)[self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0]];
-        [cell.tf setIsInvalid:_hasError];
-        [cell disableTf:_isLoginDisabled];
+    CBTextfieldTitleCell *cell = (CBTextfieldTitleCell *)[self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0]];
+    [cell.tf setIsInvalid:_hasError];
+    [cell disableTf:_isLoginDisabled];
 }
+
 
 
 @end

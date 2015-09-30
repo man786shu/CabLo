@@ -9,13 +9,11 @@
 #ifndef CBWebEngineConstants_h
 #define CBWebEngineConstants_h
 
-
-
 #define kDefaultErrorMessage @"Oops!! Something seems to have gone wrong. Please try again."
-#define BASE_URL @"http://192.168.1.7:3000"
+#define BASE_URL @"http://192.168.1.20:3000"
 
 #define REQUEST_OTP @"/api/v1/customers"
 #define OTP_VERIFICATION @"/api/v1/customers/verify"
-#define SANDBOX_NUMBER @"9990170198"
+#define CUSTOMER_SIGNUP @"/api/v1/customers/sign_up"
 
 #endif /* CBWebEngineConstants_h */

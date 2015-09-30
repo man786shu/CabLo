@@ -6,6 +6,7 @@
   Copyright (c) 2015 iAppStreet. All rights reserved.
 */
 
+"alert_title" = "CABLO";
 
 // user registration
 "enter_10_digit_mobile_registration_note" = "Lets start by verifying your 10 digit Mobile number";
@@ -15,21 +16,50 @@
 "add_otp_header_note" = "A verification code has been sent to following mobile number:";
 "enter_otp_message" = "Enter OTP sent to your Mobile number";
 
+
 //buttons
 "submit" = "SUBMIT";
+"next" = "NEXT";
 "resend_otp" = "Resend OTP";
+"done_btn" = "DONE";
+"cancel_btn" = "CANCEL";
+"camera" = "CAMERA";
+"gallery" = "GALLERY";
+"upload_id" = "UPLOAD";
+"finish" = "FINISH";
+"select_image" = "SELECT IMAGE";
+
+// govt id options
+"voter_id" = "Voter ID";
+"passport" = "Passport";
+"dl" = "Driving License";
+"pan_card" = "Pan Card";
+"upload_id_footer_note" = "No need to worry.... We just want to know who are you and we'll not disclose any documents";
+"image_selected_message" = "Hurray! you are all set to share you cab.";
+
+//action sheet message
+"image_actionsheet_message" = "Click a picture or choose from gallery";
 
 //sign up
 "fb_login" = "Login with facebook";
 "linkedIn_login" = "Login with linkedIn";
 "fb_or_manual" = "Login with facebook or enter details manually";
 "linkedin_or_manual" = "Login with linkedIn or enter details manually";
+
 // sign up personnel details
 "enter_email" = "Enter email";
 "enter_password" = "Enter password";
 "confirm_password" = "Confirm password";
 "enter_first_name" = "First name";
 "enter_last_name" = "Last name";
+"gender" = "Gender";
+"dob" = "Tell us your birthday";
+
+//Error
+"enter_all_details" = "Please enter all details";
+"invalid_email" = "Please enter valid email";
+"camera_not_available" = "Camera not available";
+"gallery_not_available" = "Gallery not available";
 
 // professional details
 "company_name" = "Enter company name";

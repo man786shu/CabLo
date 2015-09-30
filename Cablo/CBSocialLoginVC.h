@@ -10,4 +10,6 @@
 
 @interface CBSocialLoginVC : UITableViewController
 
+@property (nonatomic, strong) NSString * userMobileNumber;
+
 @end

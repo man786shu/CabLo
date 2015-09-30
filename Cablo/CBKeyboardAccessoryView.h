@@ -8,9 +8,9 @@
 
 #import <UIKit/UIKit.h>
 typedef enum : NSUInteger {
-    MAAllButtons,
-    MADoneButtonOnly
-} MAAccessoryViewMode;
+    CBAllButtons,
+    CBDoneButtonOnly
+} CBAccessoryViewMode;
 
 @protocol CBKeyboardAccessoryViewDelegate <NSObject>
 
@@ -27,7 +27,7 @@ typedef enum : NSUInteger {
 
 @property (nonatomic, weak) id <CBKeyboardAccessoryViewDelegate> delegate;
 
-- (id)initWithFrame:(CGRect)frame andMode:(MAAccessoryViewMode)mode;
+- (id)initWithFrame:(CGRect)frame andMode:(CBAccessoryViewMode)mode;
 
 - (void)disablePrevious;
 - (void)disableNext;

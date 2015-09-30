@@ -10,4 +10,6 @@
 
 @interface CBUploadIDVC : UITableViewController
 
+@property (nonatomic, strong) NSMutableDictionary *params;
+
 @end

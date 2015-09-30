@@ -11,7 +11,7 @@
 #import "CBUtility.h"
 #import "CBConstants.h"
 
-float kButtonSidePadding = 50.0;
+float kButtonDefaultSidePadding = 50.0;
 float kButtonHeight = 40.0;
 
 @interface CBTableFooterView()
@@ -87,7 +87,7 @@ float kButtonHeight = 40.0;
     {
         _separator.frame = CGRectMake(CBCenteredOrigin(mSize.width, separatorWidth), 0, separatorWidth, kSeperatorHeight);
         
-        CGFloat buttonWidth = mSize.width - (2*kButtonSidePadding);
+        CGFloat buttonWidth = mSize.width - (2*kButtonDefaultSidePadding);
         size = CGSizeMake(buttonWidth, kButtonHeight);
         x = CBCenteredOrigin(mSize.width, size.width);
         
@@ -137,7 +137,7 @@ float kButtonHeight = 40.0;
     
     if (self.footerMode == CBFooterModeAllComponents)
     {
-        CGFloat buttonWidth = mSize.width - (2*kButtonSidePadding);
+        CGFloat buttonWidth = mSize.width - (2*kButtonDefaultSidePadding);
         size = CGSizeMake(buttonWidth, kButtonHeight);
         h += size.height + top;
         
@@ -165,6 +165,19 @@ float kButtonHeight = 40.0;
     float h = [self requiredHeight];
     float w = self.bounds.size.width;
     self.frame = (CGRect) {0.0, 0.0, w, h};
+}
+
+- (void)showProgress:(BOOL)showProgress
+{
+    self.button.enabled = !showProgress;
+    self.resendButton.enabled = !showProgress;
+    
+    if (showProgress) {
+        [self.activity startAnimating];
+    }
+    else {
+        [self.activity stopAnimating];
+    }
 }
 
 

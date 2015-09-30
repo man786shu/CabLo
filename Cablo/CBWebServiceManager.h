@@ -19,6 +19,6 @@
 
 -(void)createPutRequestWithParameters:(NSDictionary *)parameters withRequestPath:(NSString *)requestPath
                   withCompletionBlock:(void(^)(id responseObject, NSError *error))completionBlock;
--(void)createMultiPartRequestWithParameters:(NSDictionary *)parameters profileImage:(UIImage *)pImage withRequestPath:(NSString *)reqPath withCompletionHandler:(void(^)(id responseObject, NSError *error))completionBlock;
+- (void)createMultiPartRequestWithParameters:(NSDictionary *)parameters profileImage:(UIImage *)pImage withImageName:(NSString *)imageName withRequestPath:(NSString *)reqPath withCompletionHandler:(void(^)(id responseObject, NSError *error))completionBlock;
 
 @end
