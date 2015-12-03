@@ -57,8 +57,22 @@
 #define kFloatingButtonFont REGULAR(15.0)
 #define kBottomSubviewHeight 250.0f
 
+#define kBlueColor RGB(24.0, 132.0, 232.0)
+#define kDarkGrayColor GRAY(0.25)
+#define kRecordRedColor RGB(192.0, 57.0, 43.0)
+
+#define kAppBackgroundColor GRAY(0.95)
+#define kMainBackgroundColor kAppBackgroundColor
+
+#define kTransparentBorderColor GRAYA(0.0, 0.25)
+
+#define kGenericCornerRadius 5.0
+
 
 // Table View Generic
+
+#define kTableViewCellMainFont REGULAR(16.0)
+#define kTableViewCellMargin 15.0
 
 #define kTableViewSidePadding 16.0
 #define kTableViewVerticalPadding 16.0
@@ -93,6 +107,12 @@
 
 #define kLOBSeparatorMargin 20.0
 #define kLOBBigContentWidth 280.0
+
+// Side menu
+
+#define kSideMenuBgColor GRAYA(1.0, 0.5)
+#define kSideMenuSelectionColor GRAY(0.75)
+#define kSideMenuWidth 260.0
 
 
 //textfield font
